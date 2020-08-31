@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+from datetime import datetime
+
+
+{% block title %}
+    <title>To Do App</title>
+{% endblock %}
+{% block body %}
+
+    <div class="row" mt-3>
+        <div class="col">
+            <h2>Add Items</h2>
+            <form method="Post" action="/">
+                <input class="form-control form-control-lg" name="todo" id="todo" type="text" placeholder="Type here .....">
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+            <hr>
+        </div>
+    </div>
+    
+
+    <div class="container">
+
+    {% for mytodo in display_data %}
+    <hr>
+        
+        <div class="m-5 pb-5 bg-info">
+        <p style="font-family: sans-serif; color: white;">{{ mytodo.post }} </p>
+        <p style="margin-left: 60%;">Date: {{ mytodo.date_posted }}</p>
+        
+        <a href="/delete/{{ mytodo.id }}" style="margin-left: 80%; text-align: center;"><button type="button" class="btn btn-danger">Delete</button></a>
+        </div>
+    </hr>
+    {% endfor %}
+
+    </div>
+
+   
+{% endblock %}
+
+
+
+
+
