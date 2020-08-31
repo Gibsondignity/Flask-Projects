@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        {% block title %}
+
+            {% if title %}
+                {{ title }}
+            {else}
+            <title>Login</title>
+            {% endif %}
+
+
+        {% endblock %}
+
+
+		<meta charset="utf-8" />
+        <!-- <link rel="stylesheet" href="url_for('static', filename='css/loginbase.c  ss')">-->
+        <link rel="stylesheet" href="../static/css/loginbase.css">
+        		
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+    </head>
+
+
+    <body class="page-sidebar page-background bg-half-img"  style="background-image:url('../static/images/download.jpg'); background-size:50%;"  >
+        <div class="page">
+            <div class="container">
+                <div class="grid">
+                    <div class="col-7">
+                        <div class="content">
+                            
+                            <p>
+                                ONLINE EDUCATIONAL PLATFORM FOR STUDENTS
+                                 IN GHANA TECHNOLOGY UNIVERSITY COLLEGE
+                            </p>
+                           
+                        </div>
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="col-4">
+
+                    
+                        {% block body %}
+   
+                        {% endblock %} 
+                    
+
+                    </div>
+                </div>
+            </div>			
+        </div>
+
+    </body>
+
+</html>

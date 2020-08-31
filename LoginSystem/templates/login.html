@@ -1,0 +1,37 @@
+{% extends 'loginbase.html' %}
+
+
+{% block body %}
+<form class="form half-size" action="/login" method="POST">
+                           
+    <h2 class="">
+        LOGIN FORM    
+    </h2>
+    
+    {{ form.hidden_tag() }}
+    <div class="login_form">
+    <div id="username" class="form_submit">
+        {{ form.username.label() }}
+        {{ form.username }}
+    </div>
+    <br>
+    <div id="password" class="form_submit">
+        {{ form.password.label() }}
+        {{ form.password }}
+    </div><br>
+        Remember Me
+        {{ form.remember }}
+    </div>
+
+
+    <div class="submit">
+        <button class="button" type="submit" {SC_FORM_SUBMIT_CALL}>sign_in</button>
+    </div>
+
+    <a href="#">Forget Password?</a><br>
+    <small>Don't have an account? <a href="/signup">Sign up</a></small>
+    
+
+</form>
+
+{% endblock %}

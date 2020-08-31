@@ -1,0 +1,21 @@
+{% extends 'loginbase.html' %}
+
+
+{% block title %}
+
+
+{% endblock %}
+{% block body %}
+
+   <a href="{{url_for('logout')}}">Logout</a>
+
+   <h1 style="text-align: center;">Welcome to main page</h1>
+
+   {% for post in posts %}
+    <h3>{{ post.title }}</h3>
+    <h5>{{ post.author }}</h5>
+    <p>{{ post.content }}</p>
+    
+
+   {% endfor %}
+{% endblock %}

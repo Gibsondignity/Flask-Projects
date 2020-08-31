@@ -1,0 +1,70 @@
+{% extends 'loginbase.html' %}
+
+
+{% block title %}
+
+
+{% endblock %}
+
+
+
+{% block body %}
+
+<form class="form half-size" action="signup" method="POST">
+                           
+    <h2 class="">
+        SIGNPU FORM   
+    </h2>
+    
+    {{ form.hidden_tag() }}
+
+        {{ form.username.label() }}
+        {{ form.username }}
+        <br><br>
+        
+        {{ form.email.label() }}
+        {{ form.email }}
+        <br><br> 
+
+        {{ form.password.label() }}
+        {{ form.password }}
+        <br><br>
+        
+<!--    
+    <div class="control">
+        <label class="label" for="name">Username</label>
+        <input id="name" class="input" type="text" placeholder="Name" name="name">
+    </div>
+
+    <div class="control">
+        <label class="label" for="pass"> Email </label>
+        <input id="email" class="input" type="email" placeholder="Email" name="email">
+    </div>	
+    
+    <div class="control">
+        <label class="label" for="pass"> Password </label>
+        <input id="password" class="input" type="password" placeholder="Password" name="password">
+    </div>
+
+    <div class="control"> 
+        <label class="label" for="pass"> Confirm Password </label>
+        <input id="confirm_Password" class="input" type="Password" placeholder="confirm_Password" name="confirm_Password">
+    </div>
+-->
+    
+    <div class="submit">
+        <button class="button" type="submit" >sign_up</button>
+    </div>
+
+    <small>Already have an account?<a href="/login">Login</a></small>
+    
+
+
+        <div id='id-acesso'>
+            
+        </div>
+</form>
+
+{% endblock %}
+
+
