@@ -28,13 +28,12 @@ def index():
             return redirect("/")
     
     else:
-        display_data = mydata.query.order_by(mydata.date_posted).all()
-        
+        display_data = mydata.query.order_by(mydata.id).all()
         
         return render_template("index.html", display_data=display_data)
 
 
-@app.route("/delete/<int:id>")
+@app.route("/delete/<int:id>") 
 def delete(id):
     delete_data = mydata.query.get_or_404(id)
     db.session.delete(delete_data)

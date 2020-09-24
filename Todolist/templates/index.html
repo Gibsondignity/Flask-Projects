@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-from datetime import datetime
+
 
 
 {% block title %}
@@ -25,8 +25,9 @@ from datetime import datetime
     <hr>
         
         <div class="m-5 pb-5 bg-info">
-        <p style="font-family: sans-serif; color: white;">{{ mytodo.post }} </p>
-        <p style="margin-left: 60%;">Date: {{ mytodo.date_posted }}</p>
+        <p style="font-family: sans-serif; color: white; padding: 10px; justify-self: start;" >{{ mytodo.post }} </p>
+        
+        <small style="margin-left: 60%;">Date: {{ mytodo.date_posted.date() }} Time: {{ mytodo.date_posted.time() }}</small>
         
         <a href="/delete/{{ mytodo.id }}" style="margin-left: 80%; text-align: center;"><button type="button" class="btn btn-danger">Delete</button></a>
         </div>
